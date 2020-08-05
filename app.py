@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
 from PIL import Image, ImageDraw, ImageFont
 from email.message import EmailMessage
@@ -63,6 +63,11 @@ def upload_files():
             'success': False,
             'error': 'One of the parameters are missing in form request body - template, data'
         }
+
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 
 app.run(host='0.0.0.0', port=9000, debug=False)
