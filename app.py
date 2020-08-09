@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 from werkzeug.utils import secure_filename
 from PIL import Image, ImageDraw, ImageFont
 from email.message import EmailMessage
+import logging
 
 import smtplib
 import pandas
@@ -13,6 +14,7 @@ server.login("finalyearprojectsbyhashpool@gmail.com", "ksit@12345$")
 
 
 app = Flask(__name__)
+logging.basicConfig(filename='debug.log', level=logging.DEBUG)
 
 
 def send_mail(name, email_id):
