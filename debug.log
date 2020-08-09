@@ -1,0 +1,18 @@
+INFO:werkzeug: * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:24:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:24:53] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:25:01] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:25:16] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:25:18] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:28:19] "[37mGET / HTTP/1.1[0m" 200 -
+DEBUG:PIL.TiffImagePlugin:tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\x1a'
+DEBUG:PIL.TiffImagePlugin:tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+DEBUG:PIL.TiffImagePlugin:tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+DEBUG:PIL.TiffImagePlugin:tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x03\x88'
+DEBUG:PIL.TiffImagePlugin:tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\x1a'
+DEBUG:PIL.TiffImagePlugin:tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+DEBUG:PIL.TiffImagePlugin:tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+DEBUG:PIL.TiffImagePlugin:tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x03\x88'
+INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:28:34] "[37mPOST /upload HTTP/1.1[0m" 200 -
