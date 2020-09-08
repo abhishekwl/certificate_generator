@@ -16,3 +16,205 @@ DEBUG:PIL.TiffImagePlugin:tag: ColorSpace (40961) - type: short (3) - value: b'\
 DEBUG:PIL.TiffImagePlugin:tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
 DEBUG:PIL.TiffImagePlugin:tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x03\x88'
 INFO:werkzeug:127.0.0.1 - - [09/Aug/2020 11:28:34] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:01:17] "[37mGET / HTTP/1.1[0m" 200 -
+ERROR:app:Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\ketan\Downloads\certificate_generator-master\app.py", line 55, in upload_files
+    unsigned_image.save(temp_file_name)
+  File "C:\Python\Python37\lib\site-packages\PIL\Image.py", line 2131, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/signed_certificate.jpg'
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:01:37] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:04:10] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:04:37] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:05:56] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:06:26] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\ketan\Downloads\certificate_generator-master\app.py", line 72, in home
+    return render_template('index.html')
+  File "C:\Python\Python37\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Python\Python37\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Python\Python37\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Python\Python37\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Python\Python37\lib\site-packages\jinja2\loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Python\Python37\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Python\Python37\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:08:08] "[35m[1mGET / HTTP/1.1[0m" 500 -
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\ketan\Downloads\certificate_generator-master\app.py", line 72, in home
+    return render_template('index.html')
+  File "C:\Python\Python37\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Python\Python37\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Python\Python37\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Python\Python37\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Python\Python37\lib\site-packages\jinja2\loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Python\Python37\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Python\Python37\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:08:23] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:09:07] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:09:07] "[33mGET /images/sun-2297961_1920.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:09:25] "[33mPOST /handler.php HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:12:09] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:12:09] "[33mGET /sun.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:12:32] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:16:27] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:16:27] "[33mGET /sun.jpg HTTP/1.1[0m" 404 -
+ERROR:app:Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\ketan\Downloads\certificate_generator-master\app.py", line 57, in upload_files
+    send_mail(name, email)
+  File "c:\Users\ketan\Downloads\certificate_generator-master\app.py", line 37, in send_mail
+    server.send_message(msg)
+  File "C:\Python\Python37\lib\smtplib.py", line 967, in send_message
+    rcpt_options)
+  File "C:\Python\Python37\lib\smtplib.py", line 882, in sendmail
+    (code, resp) = self.data(msg)
+  File "C:\Python\Python37\lib\smtplib.py", line 560, in data
+    raise SMTPDataError(code, repl)
+smtplib.SMTPDataError: (250, b'2.0.0 OK  1599418016 g192sm5199261pfb.168 - gsmtp')
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:16:56] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:18:48] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:19:14] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:27:45] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:27:45] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:31:30] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:31:30] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:31:59] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:32:52] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:32:52] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:33:16] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:35:36] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:35:36] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:37:07] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:37:07] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:38:23] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:38:23] "[37mGET / HTTP/1.1[0m" 200 -
+ERROR:app:Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\ketan\Downloads\certificate_generator-master\app.py", line 57, in upload_files
+    send_mail(name, email)
+  File "c:\Users\ketan\Downloads\certificate_generator-master\app.py", line 37, in send_mail
+    server.send_message(msg)
+  File "C:\Python\Python37\lib\smtplib.py", line 967, in send_message
+    rcpt_options)
+  File "C:\Python\Python37\lib\smtplib.py", line 882, in sendmail
+    (code, resp) = self.data(msg)
+  File "C:\Python\Python37\lib\smtplib.py", line 560, in data
+    raise SMTPDataError(code, repl)
+smtplib.SMTPDataError: (250, b'2.0.0 OK  1599419332 k88sm10599876pjk.19 - gsmtp')
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:38:52] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:44:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:44:06] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:44:30] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:46:18] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:46:18] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:46:47] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:48:46] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:48:46] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:49:05] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 00:49:15] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:41:13] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:41:13] "[33mGET /sun.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:41:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:41:47] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:41:58] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:42:20] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:42:20] "[33mGET /sun.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:42:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

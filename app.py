@@ -7,7 +7,7 @@ import logging
 import smtplib
 import pandas
 
-temp_file_name = "/tmp/signed_certificate.jpg"
+temp_file_name = "signed_certificate.jpg"
 font = ImageFont.truetype("font.ttf", 64)
 server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
 server.login("finalyearprojectsbyhashpool@gmail.com", "ksit@12345$")
@@ -71,5 +71,4 @@ def upload_files():
 def home():
     return render_template('index.html')
 
-
-app.run(host='0.0.0.0', port=9000, debug=False)
+app.run(host='127.0.0.1', port=5500, debug=False)
