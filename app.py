@@ -65,6 +65,7 @@ def upload_files():
             'success': False,
             'error': 'One of the parameters are missing in form request body - template, data'
         }
+
 @app.route('/')
 def home():
     return render_template('index.html')
