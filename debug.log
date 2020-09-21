@@ -240,3 +240,124 @@ INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:16:04] "[33mGET /templates/ HTTP/1.
 INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:16:08] "[37mGET / HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:16:08] "[37mGET / HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:16:26] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:20:58] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:20:58] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:21:15] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:31:44] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:31:44] "[37mGET / HTTP/1.1[0m" 200 -
+ERROR:app:Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Python\Python37\lib\smtplib.py", line 387, in getreply
+    line = self.file.readline(_MAXLINE + 1)
+  File "C:\Python\Python37\lib\socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Python\Python37\lib\ssl.py", line 1071, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Python\Python37\lib\ssl.py", line 929, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 57, in upload_files
+    send_mail(name, email)
+  File "app.py", line 37, in send_mail
+    server.send_message(msg)
+  File "C:\Python\Python37\lib\smtplib.py", line 967, in send_message
+    rcpt_options)
+  File "C:\Python\Python37\lib\smtplib.py", line 861, in sendmail
+    (code, resp) = self.mail(from_addr, esmtp_opts)
+  File "C:\Python\Python37\lib\smtplib.py", line 535, in mail
+    return self.getreply()
+  File "C:\Python\Python37\lib\smtplib.py", line 391, in getreply
+    + str(e))
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:32:17] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:35:35] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:35:35] "[37mGET / HTTP/1.1[0m" 200 -
+ERROR:app:Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 57, in upload_files
+    send_mail(name, email)
+  File "app.py", line 37, in send_mail
+    server.send_message(msg)
+  File "C:\Python\Python37\lib\smtplib.py", line 967, in send_message
+    rcpt_options)
+  File "C:\Python\Python37\lib\smtplib.py", line 861, in sendmail
+    (code, resp) = self.mail(from_addr, esmtp_opts)
+  File "C:\Python\Python37\lib\smtplib.py", line 534, in mail
+    self.putcmd("mail", "FROM:%s%s" % (quoteaddr(sender), optionlist))
+  File "C:\Python\Python37\lib\smtplib.py", line 367, in putcmd
+    self.send(str)
+  File "C:\Python\Python37\lib\smtplib.py", line 359, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:35:53] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:35:59] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:35:59] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:36:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:36:39] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:36:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:36:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:36:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:36:40] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:36:41] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:36:41] "[37mGET / HTTP/1.1[0m" 200 -
+ERROR:app:Exception on /upload [POST]
+Traceback (most recent call last):
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python\Python37\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python\Python37\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "app.py", line 57, in upload_files
+    send_mail(name, email)
+  File "app.py", line 37, in send_mail
+    server.send_message(msg)
+  File "C:\Python\Python37\lib\smtplib.py", line 967, in send_message
+    rcpt_options)
+  File "C:\Python\Python37\lib\smtplib.py", line 861, in sendmail
+    (code, resp) = self.mail(from_addr, esmtp_opts)
+  File "C:\Python\Python37\lib\smtplib.py", line 534, in mail
+    self.putcmd("mail", "FROM:%s%s" % (quoteaddr(sender), optionlist))
+  File "C:\Python\Python37\lib\smtplib.py", line 367, in putcmd
+    self.send(str)
+  File "C:\Python\Python37\lib\smtplib.py", line 359, in send
+    raise SMTPServerDisconnected('please run connect() first')
+smtplib.SMTPServerDisconnected: please run connect() first
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:36:53] "[35m[1mPOST /upload HTTP/1.1[0m" 500 -

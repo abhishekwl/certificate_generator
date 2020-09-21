@@ -20,7 +20,7 @@ logging.basicConfig(filename='debug.log', level=logging.DEBUG)
 def send_mail(name, email_id):
     msg = EmailMessage()
     msg['Subject'] = "Thank you for attending the workshop on \"How to Choose Right Journal\""
-    msg['From'] = 'ketan.keshav79@gmail.com'
+    msg['From'] = 'ketan.keshav7@gmail.com'
     msg['To'] = email_id
     body = "Sample Mail Body"
     msg.set_content(body)
