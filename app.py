@@ -71,4 +71,4 @@ def upload_files():
 def home():
     return render_template('index.html')
 
-app.run(host='127.0.0.1', port=5500, debug=False)
+app.run(host='0.0.0.0', port=5500, debug=False)
