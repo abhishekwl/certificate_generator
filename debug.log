@@ -218,3 +218,15 @@ INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:41:58] "[37mPOST /upload HTTP/1.1[
 INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:42:20] "[37mGET / HTTP/1.1[0m" 200 -
 INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:42:20] "[33mGET /sun.jpg HTTP/1.1[0m" 404 -
 INFO:werkzeug:127.0.0.1 - - [07/Sep/2020 13:42:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on http://0.0.0.0:5500/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://0.0.0.0:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 11:36:19] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 11:36:19] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 11:36:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 11:36:51] "[37mPOST /upload HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Running on http://0.0.0.0:5500/ (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://0.0.0.0:5500/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:03:57] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:03:57] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:03:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [21/Sep/2020 12:04:16] "[37mPOST /upload HTTP/1.1[0m" 200 -
